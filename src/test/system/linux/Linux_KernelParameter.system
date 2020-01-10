@@ -1,0 +1,14 @@
+********************************************************************************
+class : Linux_KernelParameter
+volatile
+
+--------------------------------------------------------------------------------
+Linux_KernelParameter : -eq -cmd find /proc/sys/kernel -type f | wc -l
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq Linux_ComputerSystem
+CSName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_KernelParameter
+--------------------------------------------------------------------------------
+Instance Level : Linux_KernelParameter.sh
+Property Order : SettingID Value Edittable

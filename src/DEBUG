@@ -1,0 +1,9 @@
+# trace facility implemented
+
+export SBLIM_TRACE=[1...4] enables the trace support
+
+export SBLIM_TRACE_FILE=[path/filename, e.g. $HOME/log/trace.sblim.1] enables 
+logging of the trace messages in a separate trace file instead of writing to 
+stderr
+
+

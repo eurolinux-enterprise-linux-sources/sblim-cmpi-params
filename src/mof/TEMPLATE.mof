@@ -1,0 +1,73 @@
+//
+// $CLASSNAME.mof
+//
+// (C) Copyright IBM Corp. 2006, 2009
+//
+// THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+// ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+// CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+//
+// You can obtain a current copy of the Eclipse Public License from
+// http://www.opensource.org/licenses/eclipse-1.0.php
+//
+// Author:       
+// Contributors:
+//
+// Description: 
+// auto-generated class definition of $CLASSNAME 
+// 
+
+
+#pragma locale ("en_US")
+#pragma namespace ("root/cimv2")
+
+// ===================================================================
+// 	$CLASSNAME
+// ===================================================================
+
+[Description (
+   "CIM_Setting subclass that exposes the Linux kernel parameters in /proc/sys/"),
+ Provider("cmpi:$CLASSNAME") ]
+
+class $CLASSNAME : CIM_Setting
+{
+   [Propagated ("CIM_FileSystem.CSCreationClassName"),
+    Key, MaxLen (256),
+    Description (
+      "The scoping ComputerSystem's CreationClassName.") ]
+   string CSCreationClassName;
+
+   [Propagated ("CIM_FileSystem.CSName"),
+    Key, MaxLen (256),
+    Description (
+      "The scoping ComputerSystem's Name.") ]
+   string CSName;
+
+   [Propagated ("CIM_UnixSetting.CreationClassName"),
+    Key, MaxLen (256),
+    Description (
+      "CreationClassName indicates the name of the class or the subclass "
+      "used in the creation of an instance. When used with the other key "
+      "properties of this class, this property allows all instances of this "
+      "class and its subclasses to be uniquely identified.") ]
+   string CreationClassName;    
+    
+   [Override ("CIM_Setting.SettingID"),
+    Key, MaxLen (256),
+    Description (
+      "Name of the kernel parameter. "
+      "This is the full pathname of the associated kernel parameter file. "
+      "The inherited SettingID serves as part of the key for a CIM_SystemSetting instance.") ]
+   string SettingID;
+  
+   [Description (
+      "The value of the kernel parameter. "
+      "This is the textual contents of the associated kernel parameter file.") ]
+   string Value;
+
+   [Description (
+      "Can the value of this kernel parameter be changed by root. "
+      "This is indicated by whether the associated kernel parameter file is writeable.") ]
+   boolean Edittable;
+};
+

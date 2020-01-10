@@ -1,0 +1,353 @@
+2009-05-21  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* ChangeLog, NEWS:
+
+	[2795125] cmpi-params: migrate license to EPL
+
+2009-05-21  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* COPYING, Linux_ABIParameter.c, Linux_FileSystemParameter.c,
+	Linux_KernelParameter.c, Linux_NetworkCoreParameter.c,
+	Linux_NetworkIPv4Parameter.c, Linux_NetworkUnixParameter.c,
+	Linux_VirtualMemoryParameter.c, Makefile.am, TEMPLATE.c,
+	acinclude.m4, autoconfiscate.sh, create_files,
+	provider-register.sh, sblim-cmpi-params.rh.spec,
+	sblim-cmpi-params.spec.in, mof/Linux_ABIParameter.mof,
+	mof/Linux_FileSystemParameter.mof, mof/Linux_KernelParameter.mof,
+	mof/Linux_NetworkCoreParameter.mof,
+	mof/Linux_NetworkIPv4Parameter.mof,
+	mof/Linux_NetworkUnixParameter.mof,
+	mof/Linux_VirtualMemoryParameter.mof, mof/TEMPLATE.mof:
+
+	[2795125] cmpi-params: migrate license to EPL
+
+2007-11-19  Chris Buccella <buccella@vnet.linux.ibm.com>
+
+	* Linux_ABIParameter.c, Linux_FileSystemParameter.c,
+	Linux_KernelParameter.c, Linux_NetworkCoreParameter.c,
+	Linux_NetworkIPv4Parameter.c, Linux_NetworkUnixParameter.c,
+	Linux_VirtualMemoryParameter.c, README, TEMPLATE.c, create_files,
+	mof/Linux_ABIParameter.mof, mof/Linux_FileSystemParameter.mof,
+	mof/Linux_KernelParameter.mof, mof/Linux_NetworkCoreParameter.mof,
+	mof/Linux_NetworkIPv4Parameter.mof,
+	mof/Linux_NetworkUnixParameter.mof,
+	mof/Linux_VirtualMemoryParameter.mof, mof/TEMPLATE.mof:
+
+	updated URL for CPL (1833455)
+
+2006-12-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	updated release notes
+
+2006-11-23  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/Linux_FileSystemParameter.sh:
+
+	bug #1601590: handling of files with no read access fixed (test
+	capability)
+
+2006-08-17  lynnmoss
+
+	* ChangeLog, NEWS:
+
+	Document changes for 1.2.5 version
+
+2006-08-02  lynnmoss
+
+	* Linux_ABIParameter.c, Linux_FileSystemParameter.c,
+	Linux_KernelParameter.c, Linux_NetworkCoreParameter.c,
+	Linux_NetworkIPv4Parameter.c, Linux_NetworkUnixParameter.c,
+	Linux_VirtualMemoryParameter.c, TEMPLATE.c:
+
+	bug 1532567: cmpi-params - crash if missing class directory
+
+2006-03-10  lynnmoss
+
+	* Linux_ABIParameter.c, Linux_FileSystemParameter.c,
+	Linux_KernelParameter.c, Linux_NetworkCoreParameter.c,
+	Linux_NetworkIPv4Parameter.c, Linux_NetworkUnixParameter.c,
+	Linux_VirtualMemoryParameter.c, NEWS, TEMPLATE.c, configure.ac,
+	sblim-cmpi-params.rh.spec, ChangeLog:
+
+	bug#1199129 - Providers won't compile with CMPI 1.0
+
+2006-01-18  lynnmoss
+
+	* ChangeLog:
+
+	bug# 1183805: Autoconfiscate all Provider Packages
+
+2006-01-18  lynnmoss
+
+	* AUTHORS, COPYING, DEBUG, INSTALL, Linux_ABIParameter.c,
+	Linux_FileSystemParameter.c, Linux_KernelParameter.c,
+	Linux_NetworkCoreParameter.c, Linux_NetworkIPv4Parameter.c,
+	Linux_NetworkUnixParameter.c, Linux_VirtualMemoryParameter.c,
+	Makefile.am, NEWS, README, README.TEST, README.tog-pegasus,
+	acinclude.m4, autoconfiscate.sh, configure.ac, create_files,
+	license.html, makefile, provider-register.sh, rules,
+	sblim-cmpi-params.rh.spec, sblim-cmpi-params.spec.in, setting.cmpi,
+	mof/Linux_ABIParameter.registration,
+	mof/Linux_ABIParameterRegistration.mof,
+	mof/Linux_FileSystemParameter.registration,
+	mof/Linux_FileSystemParameterRegistration.mof,
+	mof/Linux_KernelParameter.registration,
+	mof/Linux_KernelParameterRegistration.mof,
+	mof/Linux_NetworkCoreParameter.registration,
+	mof/Linux_NetworkCoreParameterRegistration.mof,
+	mof/Linux_NetworkIPv4Parameter.registration,
+	mof/Linux_NetworkIPv4ParameterRegistration.mof,
+	mof/Linux_NetworkUnixParameter.registration,
+	mof/Linux_NetworkUnixParameterRegistration.mof,
+	mof/Linux_VirtualMemoryParameter.registration,
+	mof/Linux_VirtualMemoryParameterRegistration.mof,
+	mof/REGISTRATION.mof, mof/REGISTRATION.registration,
+	mof/TEMPLATE.mof, mof/makefile, test/README, test/makefile:
+
+	bug# 1183805: Autoconfiscate all Provider Packages
+
+2004-05-07  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/system/linux/: Linux_ABIParameter.sh,
+	Linux_FileSystemParameter.sh, Linux_KernelParameter.sh,
+	Linux_NetworkCoreParameter.sh, Linux_NetworkIPv4Parameter.sh,
+	Linux_NetworkUnixParameter.sh, Linux_VirtualMemoryParameter.sh:
+
+	fixed test scripts to correctly determine file r/w permission to
+	reduce warnings
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* mof/makefile:
+
+	[no log message]
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* makefile:
+
+	[no log message]
+
+2004-03-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* env, makefile, setting.cmpi, mof/Linux_KernelParams.mof,
+	mof/Linux_KernelParamsRegistration.mof,
+	test/system/linux/Linux_KernelParameter.instance,
+	test/system/linux/createKeyFiles.sh:
+
+	[no log message]
+
+2004-03-28  Gareth Bestor <bestor@us.ibm.com>
+
+	* setting.cmpi:
+
+	Initial revision
+
+2004-03-28  Gareth Bestor <bestor@us.ibm.com>
+
+	* INSTALL, TEMPLATE.c, create_files, makefile, setting.cmpi,
+	mof/REGISTRATION.mof, mof/TEMPLATE.mof, mof/makefile, test/README,
+	test/makefile, test/sblim-cmpi-params-test.sh,
+	test/cim/Linux_ABIParameter.cim,
+	test/cim/Linux_FileSystemParameter.cim,
+	test/cim/Linux_KernelParameter.cim,
+	test/cim/Linux_NetworkCoreParameter.cim,
+	test/cim/Linux_NetworkIPv4Parameter.cim,
+	test/cim/Linux_NetworkUnixParameter.cim,
+	test/cim/Linux_VirtualMemoryParameter.cim,
+	test/system/linux/Linux_ABIParameter.system,
+	test/system/linux/Linux_FileSystemParameter.system,
+	test/system/linux/Linux_KernelParameter.system,
+	test/system/linux/Linux_NetworkCoreParameter.system,
+	test/system/linux/Linux_NetworkIPv4Parameter.system,
+	test/system/linux/Linux_NetworkUnixParameter.system,
+	test/system/linux/Linux_VirtualMemoryParameter.system:
+
+	[no log message]
+
+2004-03-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/: makefile, cim/Linux_ABIParameter.cim,
+	cim/Linux_FileSystemParameter.cim, cim/Linux_KernelParameter.cim,
+	cim/Linux_NetworkCoreParameter.cim,
+	cim/Linux_NetworkIPv4Parameter.cim,
+	cim/Linux_NetworkUnixParameter.cim,
+	cim/Linux_VirtualMemoryParameter.cim,
+	system/linux/Linux_ABIParameter.system,
+	system/linux/Linux_FileSystemParameter.system,
+	system/linux/Linux_KernelParameter.system,
+	system/linux/Linux_NetworkCoreParameter.system,
+	system/linux/Linux_NetworkIPv4Parameter.system,
+	system/linux/Linux_NetworkUnixParameter.system,
+	system/linux/Linux_VirtualMemoryParameter.system:
+
+	[no log message]
+
+2004-03-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/system/linux/Linux_KernelParameter.instance:
+
+	Initial revision
+
+2004-03-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/system/linux/Linux_KernelParameter.instance:
+
+	[no log message]
+
+2004-03-08  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/system/linux/createKeyFiles.sh:
+
+	Initial revision
+
+2004-03-08  Gareth Bestor <bestor@us.ibm.com>
+
+	* test/: makefile, cim/Linux_ABIParameter.cim,
+	cim/Linux_FileSystemParameter.cim, cim/Linux_KernelParameter.cim,
+	cim/Linux_NetworkCoreParameter.cim,
+	cim/Linux_VirtualMemoryParameter.cim,
+	cim/Linux_NetworkIPv4Parameter.cim,
+	cim/Linux_NetworkUnixParameter.cim,
+	system/linux/Linux_ABIParameter.system,
+	system/linux/Linux_FileSystemParameter.system,
+	system/linux/Linux_KernelParameter.system,
+	system/linux/Linux_NetworkCoreParameter.system,
+	system/linux/Linux_NetworkIPv4Parameter.system,
+	system/linux/Linux_NetworkUnixParameter.system,
+	system/linux/Linux_VirtualMemoryParameter.system,
+	system/linux/createKeyFiles.sh:
+
+	[no log message]
+
+2004-02-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* Linux_KernelParameter.c, Linux_FileSystemParameter.c,
+	Linux_NetworkCoreParameter.c, Linux_VirtualMemoryParameter.c,
+	Linux_NetworkIPv4Parameter.c, Linux_NetworkUnixParameter.c,
+	Linux_ABIParameter.c, mof/Linux_FileSystemParameter.mof,
+	mof/Linux_FileSystemParameterRegistration.mof,
+	mof/Linux_KernelParameter.mof,
+	mof/Linux_KernelParameterRegistration.mof,
+	mof/Linux_KernelParams.mof, mof/Linux_KernelParamsRegistration.mof,
+	mof/Linux_VirtualMemoryParameter.mof, mof/Linux_ABIParameter.mof,
+	mof/Linux_ABIParameterRegistration.mof,
+	mof/Linux_NetworkCoreParameter.mof,
+	mof/Linux_NetworkCoreParameterRegistration.mof,
+	mof/Linux_NetworkIPv4Parameter.mof,
+	mof/Linux_NetworkIPv4ParameterRegistration.mof,
+	mof/Linux_NetworkUnixParameter.mof,
+	mof/Linux_NetworkUnixParameterRegistration.mof,
+	mof/Linux_VirtualMemoryParameterRegistration.mof, test/README,
+	test/makefile, test/sblim-cmpi-params-test.sh,
+	test/cim/Linux_ABIParameter.cim,
+	test/cim/Linux_FileSystemParameter.cim,
+	test/cim/Linux_KernelParameter.cim,
+	test/cim/Linux_NetworkCoreParameter.cim,
+	test/cim/Linux_NetworkIPv4Parameter.cim,
+	test/cim/Linux_NetworkUnixParameter.cim,
+	test/cim/Linux_VirtualMemoryParameter.cim,
+	test/system/linux/Linux_ABIParameter.sh,
+	test/system/linux/Linux_ABIParameter.system,
+	test/system/linux/Linux_FileSystemParameter.sh,
+	test/system/linux/Linux_FileSystemParameter.system,
+	test/system/linux/Linux_KernelParameter.sh,
+	test/system/linux/Linux_KernelParameter.system,
+	test/system/linux/Linux_NetworkCoreParameter.sh,
+	test/system/linux/Linux_NetworkCoreParameter.system,
+	test/system/linux/Linux_NetworkIPv4Parameter.sh,
+	test/system/linux/Linux_NetworkIPv4Parameter.system,
+	test/system/linux/Linux_NetworkUnixParameter.sh,
+	test/system/linux/Linux_NetworkUnixParameter.system,
+	test/system/linux/Linux_VirtualMemoryParameter.sh,
+	test/system/linux/Linux_VirtualMemoryParameter.system:
+
+	Initial revision
+
+2004-02-24  Gareth Bestor <bestor@us.ibm.com>
+
+	* README, TEMPLATE.c, makefile, Linux_KernelParameter.c,
+	Linux_FileSystemParameter.c, Linux_NetworkCoreParameter.c,
+	Linux_VirtualMemoryParameter.c, Linux_NetworkIPv4Parameter.c,
+	Linux_NetworkUnixParameter.c, Linux_ABIParameter.c,
+	mof/Linux_FileSystemParameter.mof,
+	mof/Linux_FileSystemParameterRegistration.mof,
+	mof/Linux_KernelParameter.mof,
+	mof/Linux_KernelParameterRegistration.mof,
+	mof/Linux_KernelParams.mof, mof/Linux_KernelParamsRegistration.mof,
+	mof/Linux_VirtualMemoryParameter.mof, mof/TEMPLATE.mof,
+	mof/Linux_ABIParameter.mof, mof/Linux_ABIParameterRegistration.mof,
+	mof/Linux_NetworkCoreParameter.mof,
+	mof/Linux_NetworkCoreParameterRegistration.mof,
+	mof/Linux_NetworkIPv4Parameter.mof,
+	mof/Linux_NetworkIPv4ParameterRegistration.mof,
+	mof/Linux_NetworkUnixParameter.mof,
+	mof/Linux_NetworkUnixParameterRegistration.mof,
+	mof/Linux_VirtualMemoryParameterRegistration.mof, test/README,
+	test/makefile, test/sblim-cmpi-params-test.sh,
+	test/cim/Linux_ABIParameter.cim,
+	test/cim/Linux_FileSystemParameter.cim,
+	test/cim/Linux_KernelParameter.cim,
+	test/cim/Linux_NetworkCoreParameter.cim,
+	test/cim/Linux_NetworkIPv4Parameter.cim,
+	test/cim/Linux_NetworkUnixParameter.cim,
+	test/cim/Linux_VirtualMemoryParameter.cim,
+	test/system/linux/Linux_ABIParameter.sh,
+	test/system/linux/Linux_ABIParameter.system,
+	test/system/linux/Linux_FileSystemParameter.sh,
+	test/system/linux/Linux_FileSystemParameter.system,
+	test/system/linux/Linux_KernelParameter.sh,
+	test/system/linux/Linux_KernelParameter.system,
+	test/system/linux/Linux_NetworkCoreParameter.sh,
+	test/system/linux/Linux_NetworkCoreParameter.system,
+	test/system/linux/Linux_NetworkIPv4Parameter.sh,
+	test/system/linux/Linux_NetworkIPv4Parameter.system,
+	test/system/linux/Linux_NetworkUnixParameter.sh,
+	test/system/linux/Linux_NetworkUnixParameter.system,
+	test/system/linux/Linux_VirtualMemoryParameter.sh,
+	test/system/linux/Linux_VirtualMemoryParameter.system:
+
+	[no log message]
+
+2003-09-15  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* create_files, mof/REGISTRATION.mof, mof/TEMPLATE.mof:
+
+	updated Copyright statement
+
+2003-09-15  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* TEMPLATE.c, create_files, mof/REGISTRATION.mof, mof/TEMPLATE.mof:
+
+	updated Copyright statement
+
+2003-09-09  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* mof/: REGISTRATION.mof, TEMPLATE.mof:
+
+	added namespace pragma
+
+2003-08-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* TEMPLATE.c, env, makefile:
+
+	implemented Trace Support
+
+2003-07-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* kernel-params, rules, INSTALL, README, TEMPLATE.c, create_files,
+	env, license.html, makefile, mof/makefile, mof/REGISTRATION.mof,
+	mof/TEMPLATE.mof:
+
+	Inital release
+
+2003-07-30  Gareth Bestor <bestor@us.ibm.com>
+
+	* kernel-params, rules, INSTALL, README, TEMPLATE.c, create_files,
+	env, license.html, makefile, mof/makefile, mof/REGISTRATION.mof,
+	mof/TEMPLATE.mof:
+
+	Initial revision
+

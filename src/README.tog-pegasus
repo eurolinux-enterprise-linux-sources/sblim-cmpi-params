@@ -1,0 +1,74 @@
+OpenPegasus post install steps
+==============================
+
+When this package is installed (as RPM) on a system with the OpenPegasus 
+CIM server (tog-pegasus), it may be necessary to perform some extra 
+post install steps. These are:
+
+Provider Registration:
+----------------------
+
+Upon installation it is attempted to register the providers with Pegasus.
+This can fail if the tog-pegasus service is not running AND cimmofl 
+(the Pegasus offline MOF compiler) isn't installed.
+
+In this case it is necessary to run the following command with tog-pegasus
+running:
+
+/usr/share/sblim-cmpi-network/provider-register.sh -t pegasus \
+     -r mof/Linux_ABIParameter.registration \
+        mof/Linux_FileSystemParameter.registration \
+        mof/Linux_KernelParameter.registration \
+        mof/Linux_NetworkCoreParameter.registration \
+        mof/Linux_NetworkIPv4Parameter.registration \
+        mof/Linux_NetworkUnixParameter.registration \
+        mof/Linux_VirtualMemoryParameter.registration \
+     -m mof/Linux_ABIParameter.mof \
+        mof/Linux_FileSystemParameter.mof \
+        mof/Linux_KernelParameter.mof \
+        mof/Linux_NetworkCoreParameter.mof \
+        mof/Linux_NetworkIPv4Parameter.mof \
+        mof/Linux_NetworkUnixParameter.mof \
+        mof/Linux_VirtualMemoryParameter.mof 
+
+Make Sure Providers Can Be Found:
+---------------------------------
+
+The providers of this package are installed into the /usr/lib/cmpi (or 
+/usr/lib64/cmpi) directory. Depending on the configuration of Pegasus
+this directory might not be in the search path for providers.
+
+In this case you should create symbolic links to the Pegasus provider
+directory by issueing the following command:
+
+ln -s /usr/lib/cmpi/lib* /usr/lib/Pegasus/providers
+
+assuming that /usr/lib/Pegasus/providers is the configured Pegasus provider
+directory.
+
+Provider Deregistration:
+------------------------
+
+In order to properly de-register the providers when deinstalling this
+package the tog-pegasus service must be active. The deinstallation will
+fail otherwise.
+
+Alternatively it is possible to deregister the providers BEFORE uninstalling 
+this package with the following command:
+
+/usr/share/sblim-cmpi-network/provider-register.sh -d -t pegasus \
+     -r mof/Linux_ABIParameter.registration \
+        mof/Linux_FileSystemParameter.registration \
+        mof/Linux_KernelParameter.registration \
+        mof/Linux_NetworkCoreParameter.registration \
+        mof/Linux_NetworkIPv4Parameter.registration \
+        mof/Linux_NetworkUnixParameter.registration \
+        mof/Linux_VirtualMemoryParameter.registration \
+     -m mof/Linux_ABIParameter.mof \
+        mof/Linux_FileSystemParameter.mof \
+        mof/Linux_KernelParameter.mof \
+        mof/Linux_NetworkCoreParameter.mof \
+        mof/Linux_NetworkIPv4Parameter.mof \
+        mof/Linux_NetworkUnixParameter.mof \
+        mof/Linux_VirtualMemoryParameter.mof 
+

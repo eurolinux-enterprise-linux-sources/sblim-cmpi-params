@@ -1,0 +1,14 @@
+********************************************************************************
+class : Linux_ABIParameter
+volatile
+
+--------------------------------------------------------------------------------
+Linux_ABIParameter : -eq -cmd find /proc/sys/abi -type f | wc -l
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq Linux_ComputerSystem
+CSName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_ABIParameter
+--------------------------------------------------------------------------------
+Instance Level : Linux_ABIParameter.sh
+Property Order : SettingID Value Edittable

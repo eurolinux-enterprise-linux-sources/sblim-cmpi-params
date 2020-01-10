@@ -1,0 +1,55 @@
+Test Environment for SBLIM Params Instrumentation
+
+The SBLIM project offers a Test Suite to perform tests against
+the provider implementation and consistence tests against system
+values.
+
+Prerequisites 
+.............
+
+- sblim-testsuite package propertly installed
+- sblim-cmpi-base package propertly installed
+- sblim-cmpi-params package propertly installed
+
+
+Install Configuration Files
+...........................
+
+make install
+... also installs the configuration file into the testsuite directory
+as indicated by configure
+
+make uninstall
+... also deletes the cmpi-params specific files out of the testsuite
+directories
+
+
+Run Test
+........
+
+Run the test in the testsuite dir by executing 
+./sblim-cmpi-params-test.sh
+                                                                                
+
+TEST WARNINGS
+-------------
+Some of the instance tests will report an warning. This is 'normal'
+and is a result of the fact that some of kernel parameters, and
+therefore their associated /proc files, change constantly.
+In particular, random seeds, entropy, and inode values change
+all the time so the original value read into in CIM may not be
+identical to the current value read by the test scripts.
+
+Also, the IPv4 file /proc/sys/net/ipv4/route/flush sometimes
+behaves strangely and unlike most other procfs files
+it cannot be viewed (!), i.e.
+
+	ls -l /proc/sys/net/ipv4/route/flush
+	-rw-r--r--    1 root     root            0 Feb 16 10:50 /proc/sys/net/ipv4/route/flush
+
+	cat /proc/sys/net/ipv4/route/flush
+	cat: /proc/sys/net/ipv4/route/flush: Invalid argument
+
+Hence the Linux_NetworkIPv4Parameter instance test reports an warning
+on this parameter.
+ 

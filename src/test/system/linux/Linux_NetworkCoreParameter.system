@@ -1,0 +1,14 @@
+********************************************************************************
+class : Linux_NetworkCoreParameter
+volatile
+
+--------------------------------------------------------------------------------
+Linux_NetworkCoreParameter : -eq -cmd find /proc/sys/net/core -type f | wc -l
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq Linux_ComputerSystem
+CSName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_NetworkCoreParameter
+--------------------------------------------------------------------------------
+Instance Level : Linux_NetworkCoreParameter.sh
+Property Order : SettingID Value Edittable

@@ -1,0 +1,14 @@
+********************************************************************************
+class : Linux_NetworkIPv4Parameter
+volatile
+
+--------------------------------------------------------------------------------
+Linux_NetworkIPv4Parameter : -eq -cmd find /proc/sys/net/ipv4 -type f | wc -l
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq Linux_ComputerSystem
+CSName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_NetworkIPv4Parameter
+--------------------------------------------------------------------------------
+Instance Level : Linux_NetworkIPv4Parameter.sh
+Property Order : SettingID Value Edittable
