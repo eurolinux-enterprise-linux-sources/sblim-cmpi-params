@@ -2,7 +2,7 @@
 
 Name:           sblim-cmpi-params
 Version:        1.3.0
-Release:        10%{?dist}
+Release:        8%{?dist}
 Summary:        SBLIM params instrumentation
 
 Group:          Applications/System
@@ -154,12 +154,6 @@ fi
 %postun -p /sbin/ldconfig
 
 %changelog
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 1.3.0-10
-- Mass rebuild 2014-01-24
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.3.0-9
-- Mass rebuild 2013-12-27
-
 * Wed Aug 14 2013 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.3.0-8
 - Use Pegasus root/interop instead of root/PG_Interop
 
