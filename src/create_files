@@ -1,0 +1,66 @@
+#!/bin/sh
+
+
+#-------------------------------------------------------------------------
+
+# remove old Linux_KernelParams.mof
+rm -f mof/Linux_KernelParams.mof
+echo "//
+// Linux_KernelParams.mof
+//
+// (C) Copyright IBM Corp. 2003, 2009
+//
+// THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+// (\"AGREEMENT\"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+// CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+//
+// You can obtain a current copy of the Eclipse Public License from
+// http://www.opensource.org/licenses/eclipse-1.0.php
+//
+// Author:       
+// Contributors:
+//
+// Description: 
+// auto-generated mof file to include all mof files holding the class
+// descriptions of instrumented kernel parameters 
+// 
+
+" > mof/Linux_KernelParams.mof
+
+#-------------------------------------------------------------------------
+
+# Get the list of kernel parameter directories and class names. Remove comments and blank lines
+cat kernel-params | grep -Ev "^#.*" | grep -Ev "^$" | while read DIR CLASSNAME; do
+  # Prepend /proc/sys to kernel parameter directory name if full pathname is missing
+  if [[ $DIR = ${DIR#/*} ]]; then
+    DIR=/proc/sys/$DIR
+  fi
+ 
+  # Make sure the kernel parameter directory actually exists
+  if [[ ! -d $DIR ]]; then
+    echo "ERROR: The specified kernel parameter directory $DIR does not exist" >&2
+    exit 1
+  fi
+
+  # Copy the generic template MOF file and substitute in this kernel parameter classname
+  echo "Creating mof/$CLASSNAME.mof from mof/TEMPLATE.mof ..."
+  rm -f mof/$CLASSNAME.mof
+  cat mof/TEMPLATE.mof | sed -e "s/\$CLASSNAME/$CLASSNAME/g" > mof/$CLASSNAME.mof 
+  echo "Done"
+
+  echo "#pragma include (\"$CLASSNAME.mof\")" >> mof/Linux_KernelParams.mof 
+
+  # Copy the generic registration file and substitute in this kernel parameter classname
+  echo "Creating mof/${CLASSNAME}.registration from mof/REGISTRATION.registration ..."
+  rm -f mof/${CLASSNAME}.registration
+  cat mof/REGISTRATION.registration | sed -e "s/\$CLASSNAME/$CLASSNAME/g" > mof/${CLASSNAME}.registration 
+  echo "Done"
+
+  # Copy the generic template .c provider file and substitute in this kernel parameter classname
+  # and associated kernel directory pathname
+  echo "Creating $CLASSNAME.c from TEMPLATE.c ..."
+  rm -f $CLASSNAME.c
+  cat TEMPLATE.c | sed -e "s/\$CLASSNAME/$CLASSNAME/g" | sed -e "s!\$FILEROOT!$DIR!g" > $CLASSNAME.c
+  echo "Done"
+done
+

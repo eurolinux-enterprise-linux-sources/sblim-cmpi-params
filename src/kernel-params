@@ -1,0 +1,8 @@
+# $FILEROOT $CLASSNAME
+/proc/sys/kernel		Linux_KernelParameter
+/proc/sys/fs			Linux_FileSystemParameter
+/proc/sys/vm			Linux_VirtualMemoryParameter
+/proc/sys/net/core		Linux_NetworkCoreParameter
+/proc/sys/net/ipv4		Linux_NetworkIPv4Parameter
+/proc/sys/net/unix		Linux_NetworkUnixParameter
+/proc/sys/abi			Linux_ABIParameter

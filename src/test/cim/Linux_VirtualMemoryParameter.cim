@@ -1,0 +1,28 @@
+********************************************************************************
+class : Linux_VirtualMemoryParameter
+objectPath : Linux_VirtualMemoryParameter.CSCreationClassName="Linux_ComputerSystem",CSName="HOSTNAME",CreationClassName="Linux_VirtualMemoryParameter",SettingID="/path/name/to/file"
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance								     set
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance							       execQuery
+Expected Exception : NOT_SUPPORTED
+

@@ -1,0 +1,14 @@
+********************************************************************************
+class : Linux_VirtualMemoryParameter
+volatile
+
+--------------------------------------------------------------------------------
+Linux_VirtualMemoryParameter : -eq -cmd find /proc/sys/vm -type f | wc -l
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq Linux_ComputerSystem
+CSName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_VirtualMemoryParameter
+--------------------------------------------------------------------------------
+Instance Level : Linux_VirtualMemoryParameter.sh
+Property Order : SettingID Value Edittable

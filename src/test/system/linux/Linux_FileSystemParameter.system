@@ -1,0 +1,14 @@
+********************************************************************************
+class : Linux_FileSystemParameter
+volatile
+
+--------------------------------------------------------------------------------
+Linux_FileSystemParameter : -eq -cmd find /proc/sys/fs -type f | wc -l
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq Linux_ComputerSystem
+CSName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_FileSystemParameter
+--------------------------------------------------------------------------------
+Instance Level : Linux_FileSystemParameter.sh
+Property Order : SettingID Value Edittable

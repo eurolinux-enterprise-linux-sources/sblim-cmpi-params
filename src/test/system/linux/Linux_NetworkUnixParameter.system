@@ -1,0 +1,14 @@
+********************************************************************************
+class : Linux_NetworkUnixParameter
+volatile
+
+--------------------------------------------------------------------------------
+Linux_NetworkUnixParameter : -eq -cmd find /proc/sys/net/unix -type f | wc -l
+
+--------------------------------------------------------------------------------
+CSCreationClassName : -eq Linux_ComputerSystem
+CSName : -eq -cmd hostname -f
+CreationClassName : -eq Linux_NetworkUnixParameter
+--------------------------------------------------------------------------------
+Instance Level : Linux_NetworkUnixParameter.sh
+Property Order : SettingID Value Edittable
